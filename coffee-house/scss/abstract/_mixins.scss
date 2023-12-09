@@ -1,0 +1,51 @@
+@mixin font($size, $height: 2.4rem, $weight: 400, $style: normal) {
+	font-size: $size;
+	line-height: $height;
+	font-weight: $weight;
+	font-style: $style;
+}
+
+@mixin svg-hover($fill: $color-accent, $stroke: $color-accent, $color-hover: $color-accent) {
+	transition: all 0.3s ease-in-out;
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			color: $color-hover;
+			background-color: $color-conteiner;
+
+			svg {
+				fill: $fill;
+				stroke: $stroke;
+			}
+		}
+	}
+}
+
+@mixin colums($width) {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	*> {
+		flex-basis: $width;
+	}
+}
+
+@mixin flex-start {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin media-tablet {
+	@media(max-width: $width-tablet) {
+		@content;
+	}
+
+}
+
+@mixin media-mobile {
+	@media(max-width: $width-mobile) {
+		@content;
+	}
+}

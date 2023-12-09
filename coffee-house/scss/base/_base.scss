@@ -1,0 +1,59 @@
+.none {
+	display: none;
+}
+
+html {
+	font-size: 10px;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: 1.6rem;
+	box-sizing: border-box;
+}
+
+p {
+	@include font($size: 1.6rem);
+	color: $color-main;
+}
+
+h1 {
+	@include font($size: 7.2rem, $height: 105%, $weight: 600);
+	color: $color-second;
+
+	span {
+		font-style: italic;
+		color: $color-accent;
+	}
+
+	@media (max-width:768px) {
+		font-size: clamp(4.2rem, 1.262rem + 7.732vw, 7.2rem);
+	}
+}
+
+h2 {
+	color: $color-main;
+	@include font($size: 6rem, $height: 125%, $weight: 600);
+
+	span {
+		font-style: italic;
+		color: $color-accent;
+	}
+
+	@media (max-width:768px) {
+		font-size: clamp(3.2rem, 0.458rem + 7.216vw, 6rem);
+	}
+}
+
+h3 {
+	color: $color-main;
+	@include font($size: 2.4rem, $height: 125%, $weight: 600);
+}
+
+img {
+	display: block;
+}
+
+// $size, $height: 2.4rem, $weight: 400, $style: normal

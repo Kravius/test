@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon/favicon-32x32.png"
+    />
+    <title>Coffee House</title>
+    <link rel="stylesheet" href="./scss/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper wrapper">
+        <a href="./index.html" class="header__link header__link-shop">
+          <svg class="logo-icon">
+            <use href="./img/header/logo/logo-sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <div class="header__humburger">
+          <nav class="header__navigation">
+            <ul class="navigation">
+              <li>
+                <a class="navigation__link" href="./index.html#favourites"
+                  >Favorite coffee</a
+                >
+              </li>
+              <li>
+                <a class="navigation__link" href="./index.html#about">About</a>
+              </li>
+              <li>
+                <a class="navigation__link" href="./index.html#mobile"
+                  >Mobile app</a
+                >
+              </li>
+              <li>
+                <a class="navigation__link" href="#footer">Contact us</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="./index-menu-buy.html" class="header__menu-btn">
+            Menu
+            <svg class="icon-coffee-menu">
+              <use href="./img/header/menu/coffee-sprite.svg#icon-coffee"></use>
+            </svg>
+          </a>
+        </div>
+        <span class="hamburger"> </span>
+      </div>
+    </header>
+    <main>
+      <section class="coffer">
+        <div class="coffe__wrapper wrapper">
+          <h1 class="coffe__h1">
+            Behind each of our cups hides an <span>amazing surprise</span>
+          </h1>
+          <div class="radio-conteiner-main">
+            <label>
+              <input
+                type="radio"
+                name="coding"
+                class="real__checkbox"
+                checked
+              />
+              <span class="custom_checkbox custom__coffe">Coffee</span>
+            </label>
+            <label>
+              <input type="radio" name="coding" class="real__checkbox" />
+              <span class="custom_checkbox custom__tea">Tea</span>
+            </label>
+            <label>
+              <input type="radio" name="coding" class="real__checkbox" />
+              <span class="custom_checkbox custom__deser">Dessert</span>
+            </label>
+          </div>
+          <div class="coffe__shop">
+            <div class="naming">
+              <div class="naming__conteiner-img">
+                <img src="./img/mobile/coffe/coffee-1.png" alt="irish" />
+              </div>
+              <div class="namig__content">
+                <h3>Irish coffee</h3>
+                <p>
+                  Fragrant black coffee with Jameson Irish whiskey and whipped
+                  milk
+                </p>
+                <h3 class="naming__price">$7.00</h3>
+              </div>
+            </div>
+          </div>
+          <button class="namig__reload">
+            <svg>
+              <use
+                href="./img/mobile/shop/button-icon-dark-2.svg#icon-reload"
+              ></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer__wrapper wrapper">
+        <div class="footer__content">
+          <div class="social">
+            <h2>Sip, Savor, Smile. <span>It’s coffee time!</span></h2>
+            <div class="social__content">
+              <a href="" class="social__link">
+                <svg class="social_inter">
+                  <use href="./img/footer/sprite-footer-icon.svg#twitter"></use>
+                </svg>
+              </a>
+              <a href="" class="social__link">
+                <svg class="social_inter">
+                  <use
+                    href="./img/footer/sprite-footer-icon.svg#instagram"
+                  ></use>
+                </svg>
+              </a>
+              <a href="" class="social__link">
+                <svg class="social_inter">
+                  <use
+                    href="./img/footer/sprite-footer-icon.svg#facebook"
+                  ></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="social__contact">
+            <p class="social__contact-text">Contact us</p>
+            <div class="social__contact-info">
+              <a
+                href="https://maps.app.goo.gl/BbroJbhMjht92CT67"
+                class="social__info"
+                target="_blank"
+              >
+                <svg class="social__icon">
+                  <use
+                    href="./img/footer/contact/social-sprite.svg#icon-ellipse"
+                  ></use>
+                </svg>
+                8558 Green Rd., LA</a
+              >
+              <a href="tel:+1(603)555-0123" class="social__info">
+                <svg class="social__icon">
+                  <use
+                    href="./img/footer/contact/social-sprite.svg#icon-phone"
+                  ></use>
+                </svg>
+                +1 (603) 555-0123</a
+              >
+              <a href="" class="social__info">
+                <svg class="social__icon">
+                  <use
+                    href="./img/footer/contact/social-sprite.svg#icon-cloke"
+                  ></use>
+                </svg>
+                Mon-Sat: 9:00 AM – 23:00 PM</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- <div class="overlay">
+      <div class="modal">
+        <div class="modal__img">
+          <img src="./img/modal/dessert-1.png" alt="desert"  class="modal-img"/>
+        </div>
+        <div class="modal__content">
+          <h3 class="modal-title">Marble cheesecake</h3>
+          <p>
+            Philadelphia cheese with lemon zest on a light sponge cake and red
+            currant jam
+          </p>
+          <div class="radio__conteiner">
+            <p>Size</p>
+            <div class="modal-size">
+              <label>
+                <input
+                  type="radio"
+                  name="coding-size"
+                  class="real__checkbox"
+                  checked
+                />
+                <span class="custom_checkbox custom__s modal-radio-diraction"
+                  >Coffee</span
+                >
+              </label>
+              <label>
+                <input type="radio" name="coding" class="real__checkbox" />
+                <span class="custom_checkbox custom__m modal-radio-diraction"
+                  >Tea</span
+                >
+              </label>
+              <label>
+                <input type="radio" name="coding" class="real__checkbox" />
+                <span class="custom_checkbox custom__l modal-radio-diraction"
+                  >Dessert</span
+                >
+              </label>
+            </div>
+          </div>
+          <div class="radio__conteiner">
+            <p>Additives</p>
+            <div class="modal-additives">
+              <label>
+                <input
+                  type="radio"
+                  name="coding-additives"
+                  class="real__checkbox"
+                />
+                <span class="custom_checkbox custom__1 modal-radio-diraction"
+                  >Coffee</span
+                >
+              </label>
+              <label>
+                <input type="radio" name="coding" class="real__checkbox" />
+                <span class="custom_checkbox custom__2 modal-radio-diraction"
+                  >Tea</span
+                >
+              </label>
+              <label>
+                <input type="radio" name="coding" class="real__checkbox" />
+                <span
+                  class="custom_checkbox custom__3 modal-radio-diraction"
+                  >Dessert</span
+                >
+              </label>
+            </div>
+          </div>
+          <div class="modal__total">
+            <h3>Total:</h3>
+            <h3 class="modal__price">$3.50</h3>
+          </div>
+          <div class="modal__recomendation">
+            <img src="./img/modal/info-empty.png" alt="icon" />
+            <p class="recomandation-text">
+              The cost is not final. Download our mobile app to see the final
+              price and place your order. Earn loyalty points and enjoy your
+              favorite coffee with up to 20% discount.
+            </p>
+          </div>
+          <button class="close-modalbtn">Close</button>
+        </div>
+      </div>
+    </div> -->
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>

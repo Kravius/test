@@ -1,0 +1,196 @@
+.favourites {
+	background-color: $color-body;
+	padding-bottom: 100px;
+}
+
+.favourites__wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-self: center;
+	gap: 40px;
+	text-align: center;
+
+}
+
+
+.favourites__conteiner {
+	@include flex-start;
+	position: relative;
+
+	@media (max-width:690px) {
+		align-self: center;
+	}
+}
+
+.icon {
+	width: 24px;
+	height: 24px;
+	stroke: $color-conteiner;
+}
+
+.favourites__btn {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 1px solid $color-conteiner;
+
+	@include svg-hover($fill: none);
+
+	@media (max-width:690px) {
+		display: none;
+	}
+}
+
+.favourites__btn-left {}
+
+.favourites__btn-right {}
+
+
+
+.favourites__btns {
+	display: flex;
+	gap: 12px;
+	align-self: center;
+}
+
+.favourites__btns {
+	display: flex;
+	gap: 10px;
+}
+
+.favourites__btn-line {
+	position: relative;
+	width: 40px;
+	height: 4px;
+	border-radius: 100px;
+	border: none;
+	background-color: $color-border;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 100%;
+		background-color: $color-conteiner;
+		transition: width 1s ease-in;
+	}
+
+	&.active::before {
+		width: 100%;
+	}
+}
+
+//добавить на js изменение цвета
+.favourites__btn-line.active::before {
+	width: 100%;
+}
+
+
+.swiper {
+	width: 480px;
+	overflow: hidden;
+	position: relative;
+	// flex-grow: 8;
+
+	@media (max-width:630px) {
+		width: 348px;
+	}
+}
+
+
+
+
+
+.slider {
+	display: flex;
+	position: relative;
+	overflow: hidden;
+	gap: 16px;
+	width: 480px;
+
+
+	@media (max-width:630px) {
+		max-width: 348px;
+	}
+}
+
+
+.slider__kart {
+	display: none;
+	position: relative;
+	gap: 16px;
+	flex-direction: column;
+	padding-bottom: 4px;
+	animation: .5s ease-in-out;
+
+	img {
+		@media (max-width:630px) {
+			max-width: 348px;
+		}
+	}
+
+	&.active-swipe {
+		display: flex; //если задать вот так, все гуд
+	}
+}
+
+.next {
+	display: flex;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+
+.to-left {
+	animation-name: left;
+}
+
+.from-left {
+	display: block;
+	animation-name: left;
+	animation-direction: reverse;
+}
+
+.to-right {
+	animation-name: right;
+	animation-direction: reverse;
+}
+
+.from-right {
+	animation-name: right;
+}
+
+
+@keyframes left {
+	from {
+		left: 0;
+	}
+
+	to {
+		left: -100%;
+	}
+}
+
+@keyframes right {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: 0;
+	}
+}
+
+//  const btns = document.querySelectorAll('.favourites__btn-line');
+
+// btns.forEach(btn => {
+//   btn.addEventListener('click', () => {
+//     btns.forEach(b => b.classList.remove('active'));
+//     btn.classList.add('active');
+//   });
+// });

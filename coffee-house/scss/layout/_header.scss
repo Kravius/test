@@ -1,0 +1,101 @@
+.header {
+	padding-top: 17px;
+	padding-bottom: 20px;
+	background-color: $color-second;
+	position: relative;
+}
+
+.header__wrapper {
+	position: relative;
+	@include flex-start;
+}
+
+.header__link {
+	z-index: 3;
+	cursor: default;
+}
+
+.logo-object {
+	width: 100px;
+	height: 60px;
+}
+
+
+.header__navigation {
+	@include media-tablet {
+		margin-top: 160px;
+
+	}
+}
+
+.navigation {
+	@include flex-start;
+	list-style: none;
+	gap: 40px;
+
+	@include media-tablet {
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
+	}
+}
+
+.navigation__link {
+	@include media-tablet {
+		z-index: 3;
+	}
+
+	color: $color-main;
+	@include font($size: 1.6rem, $weight: 600);
+	cursor: pointer;
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			transition: all .3s ease-in-out;
+			border-bottom: 2px solid $color-main;
+		}
+	}
+
+	@include media-tablet {
+		font-size: 3.2rem;
+		line-height: 125%;
+	}
+}
+
+.icon-coffee-menu {
+	width: 20px;
+	height: 20px;
+	fill: $color-body;
+
+	@include media-tablet {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.header__menu-btn {
+	display: flex;
+	@include font($size: 1.6rem, $weight: 600);
+	color: $color-main;
+	text-decoration: none;
+	gap: 4px;
+	border-bottom: 2px solid transparent;
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			outline: none;
+			border-bottom: 2px solid $color-main;
+			transition: all .4s ease-in-out;
+
+			.icon-coffee-menu {
+				fill: $color-accent;
+			}
+		}
+	}
+
+	@include media-tablet {
+		font-size: 3.2rem;
+		line-height: 125%;
+		gap: 16px;
+	}
+}

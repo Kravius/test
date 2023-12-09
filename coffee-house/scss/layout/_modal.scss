@@ -1,0 +1,129 @@
+body {
+	position: relative;
+}
+
+.overlay {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(64, 63, 61, 0.80);
+	z-index: 4;
+}
+
+.modal {
+	display: flex;
+	gap: 20px;
+	border-radius: 40px;
+	padding: 16px;
+	background-color: $color-body;
+}
+
+.modal__img {
+	width: 340px;
+	height: 321px;
+	overflow: hidden;
+	border-radius: 40px;
+
+	img {
+		object-fit: cover;
+		border-radius: 40px;
+		width: 100%;
+	}
+}
+
+.modal__content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 458px;
+}
+
+.radio__conteiner {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.modal-size,
+.modal-additives {
+	display: flex;
+	gap: 8px;
+}
+
+.modal__total {
+	display: flex;
+	justify-content: space-between;
+}
+
+.modal__recomendation {
+	display: flex;
+	gap: 8px;
+	border-top: 1px solid $color-border;
+	padding: 12px;
+
+	img {
+		width: 16px;
+		height: 16px;
+	}
+}
+
+.recomandation-text {
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 140%;
+	// border-top: 1px solid $color-border;
+	// padding: 12px;
+}
+
+.close-modalbtn {
+	padding: 10px;
+	border-radius: 100px;
+	transition: all .3s ease-in-out;
+	border: 1px solid;
+
+	&:hover {
+		color: $color-body;
+		background-color: $color-conteiner;
+	}
+}
+
+
+//radio btn
+.modal-radio-diraction::after {
+	color: $color-main;
+	left: 15%;
+}
+
+.custom__1::after {
+	content: '1';
+	left: 17%;
+}
+
+.custom__2::after {
+	content: '2';
+	left: 15%;
+}
+
+.custom__3::after {
+	content: '3';
+}
+
+.custom__s::after {
+	content: 'S';
+}
+
+.custom__m::after {
+	content: 'M';
+	left: 13%;
+}
+
+.custom__l::after {
+	content: 'L';
+}

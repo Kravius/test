@@ -1,0 +1,131 @@
+.coffer {
+	padding-bottom: 100px;
+	background-color: $color-body;
+}
+
+.coffe__wrapper {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.coffe__h1 {
+	max-width: 800px;
+	color: $color-main;
+	font-size: 6rem;
+	line-height: 125%;
+
+	@media (max-width:630px) {
+		font-size: 3.2rem;
+	}
+}
+
+.radio-conteiner-main {
+	display: flex;
+	padding-top: 40px;
+	gap: clamp(8px, 2vw, 16px);
+}
+
+.coffe__shop {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 40px;
+	gap: 40px;
+	justify-content: center;
+}
+
+.naming {
+	box-sizing: border-box;
+	position: relative;
+	cursor: pointer;
+	width: 310px;
+	height: 506px;
+	border: 1px solid $color-border;
+	border-radius: 40px;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			box-shadow: 1px 0 2px 5px $color-main;
+
+			img {
+				transform: scale(1);
+			}
+		}
+	}
+
+	@media(max-width:1090px) {
+		&:nth-child(n + 5) {
+			display: none;
+		}
+	}
+
+}
+
+.naming__conteiner-img {
+	width: 310px;
+	height: 310px;
+	overflow: hidden;
+	border-radius: 38px;
+
+	img {
+		width: 100%;
+		height: 100%;
+		transform: scale(1.1);
+		transition: transform .3s ease-in;
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				transform: scale(1);
+			}
+		}
+	}
+}
+
+.namig__content {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 20px 20px 0;
+	text-align: left;
+	margin-bottom: auto;
+}
+
+.naming__price {
+	padding-bottom: 20px;
+	padding-left: 20px;
+	margin-right: auto;
+}
+
+.namig__reload {
+	display: none;
+	margin-top: 40px;
+	border: none;
+	background: none;
+	border-radius: 50%;
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+
+			svg {
+				fill: $color-conteiner;
+				stroke: $color-body;
+			}
+		}
+	}
+
+	svg {
+		transition: all .4s ease-in-out;
+		width: 60px;
+		height: 60px;
+		fill: $color-body;
+		stroke: $color-conteiner;
+	}
+
+	@media(max-width:1090px) {
+		display: block;
+	}
+}

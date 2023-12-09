@@ -1,0 +1,119 @@
+.footer {
+	background-color: $color-body;
+	padding-bottom: 20px;
+}
+
+.footer__content {
+	background-color: $color-conteiner;
+	border-radius: 40px;
+	display: flex;
+	padding: 100px;
+	gap: 100px;
+
+	@media (max-width: 768px) {
+		justify-content: center;
+		flex-direction: column;
+		padding-left: clamp(1.6rem, -2.709rem + 11.34vw, 6rem);
+		padding-right: clamp(1.6rem, -2.709rem + 11.34vw, 6rem);
+		gap: clamp(4rem, -1.876rem + 15.464vw, 10rem);
+	}
+
+	@media (max-width:630px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		// font-size: 3.2rem;
+		// gap: 40px;
+	}
+}
+
+.social {
+	@include flex-start;
+	flex-direction: column;
+	gap: 40px;
+
+	max-width: 530px;
+	min-width: 348px;
+
+	h2 {
+		margin-right: auto;
+		color: $color-second;
+	}
+}
+
+.social__content {
+	display: flex;
+	margin-right: auto;
+	gap: 12px;
+
+}
+
+.social__icon {
+	width: 20px;
+	height: 20px;
+}
+
+.social__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: $color-second;
+	gap: 8px;
+	@include svg-hover($stroke: $color-main);
+	width: 60px;
+	height: 60px;
+	border: 1px solid $color-border;
+	border-radius: 50%;
+
+	.social_inter {
+		stroke: $color-border;
+		width: 24px;
+		height: 24px;
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			background-color: $color-body;
+		}
+	}
+}
+
+.social__info {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: $color-second;
+	gap: 8px;
+	border-bottom: 2px solid transparent;
+	@include font($size: 1.6rem, $weight: 600);
+
+	svg {
+		stroke: $color-border;
+		fill: $color-conteiner;
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			border-bottom: 2px solid $color-second;
+		}
+	}
+}
+
+.social__contact {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.social__contact-text {
+	@include font($size: 2.4rem, $height: 30px);
+	color: $color-second;
+}
+
+.social__contact-info {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	min-width: 135px;
+}

@@ -1,0 +1,9 @@
+.wrapper {
+	max-width: $width;
+	margin: 0 auto;
+	padding: 0 40px;
+
+	@media(max-width: 590px) {
+		padding: 0 16px;
+	}
+}
